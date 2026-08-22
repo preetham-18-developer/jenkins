@@ -287,9 +287,9 @@ function tryConfirmationPost(element, opt, context) {
           const form = document.createElement("form");
           form.setAttribute("method", "POST");
           if (opt.event.postTo.startsWith("/")) {
-            form.setAttribute("action", pt.event.postTo);
+            form.setAttribute("action", opt.event.postTo);
           } else {
-            form.setAttribute("action", context + pt.event.postTo);
+            form.setAttribute("action", context + opt.event.postTo);
           }
           crumb.appendToForm(form);
           document.body.appendChild(form);
